@@ -309,7 +309,7 @@ where
         let pk = ProjectivePoint::<C>::lincomb(&ProjectivePoint::<C>::generator(), &u1, &R, &u2);
         let vk = Self::from_affine(pk.into())?;
 
-        // `zkMIPS-patch`: Verifying with the recovered key is not needed,
+        // `Ziren-patch`: Verifying with the recovered key is not needed,
         //  as the prupose of this check is for curves that require low-s.
         //
         //  The verification is replaced with a simple check.
